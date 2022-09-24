@@ -1,0 +1,269 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --veryDarkMagenta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
+  --darkGrayishMagenta: hsl(303, 10%, 53%);
+  --lightGrayishMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--white);
+  background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0% 0%, 0% -20%;
+  background-size: 25%, 100%;
+  margin: 5% 30px 0 5%;
+  font-family: "League Spartan", sans-serif;
+}
+
+/* first section */
+.product {
+  display: flex;
+  margin: 0 0 0 30px;
+}
+
+.topic {
+  width: 40%;
+  margin: 0 0px 20px 15px;
+  padding: 0 20px 0 0;
+}
+
+.topic h1 {
+  color: var(--veryDarkMagenta);
+  font-weight: 700;
+  font-size: 25px;
+  padding: 0 10em 0 0;
+}
+
+.topic p {
+  color: var(--darkGrayishMagenta);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 20px 5em 20px 0;
+}
+
+.stars {
+  margin: 0 0 0 10%;
+}
+
+.first-star,
+.second-star,
+.third-star {
+  display: flex;
+  background-color: var(--lightGrayishMagenta);
+  padding: 10px 20px;
+  border: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.first-star img,
+.second-star img,
+.third-star img {
+  margin: 3px 5px 0 0;
+  width: 10px;
+  height: 10px;
+}
+
+.first-star h6,
+.second-star h6,
+.third-star h6 {
+  margin: 5px 0 0 5px;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--veryDarkMagenta);
+}
+
+.first-star {
+  margin: 0 70px 10px 20px;
+}
+
+.second-star {
+  margin: 0 35px 10px 60px;
+}
+
+.third-star {
+  margin: 0 10px 10px 100px;
+  padding: 10px 40px 10px 20px;
+}
+
+/* second section */
+.testimonial {
+  display: grid;
+  grid-template-areas: "a b c";
+  margin: 0 12% 10px 35px;
+}
+
+.Colton-Smith,
+.Irene-Roberts,
+.Anne-Wallace {
+  background-color: var(--veryDarkMagenta);
+  color: var(--lightGrayishMagenta);
+  padding: 30px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  margin: 0 20px 0 0;
+}
+
+.Colton-Smith #head,
+.Irene-Roberts #head,
+.Anne-Wallace #head {
+  display: flex;
+}
+
+.Colton-Smith #head img,
+.Irene-Roberts #head img,
+.Anne-Wallace #head img {
+  margin: 0 15px 20px 0;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+#name p {
+  color: var(--softPink);
+  padding: 5px 0 0 0;
+  opacity: 60%;
+}
+
+.Colton-Smith #body,
+.Irene-Roberts #body,
+.Anne-Wallace #body {
+  line-height: 1.3;
+  opacity: 80%;
+}
+
+.Irene-Roberts #body {
+  padding: 0 10px 0 0;
+}
+
+.Colton-Smith {
+  margin: 10px 20px 50px 0;
+}
+
+.Irene-Roberts {
+  margin: 30px 20px 30px 0;
+}
+
+.Anne-Wallace {
+  margin: 50px 20px 10px 0;
+}
+
+/* media */
+@media (max-width: 600px) {
+  body {
+    background-image: url(../images/bg-pattern-top-mobile.svg),
+      url(../images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% 0%, 0% 100%;
+    background-size: 100%, 100%;
+    margin: 4em 0;
+  }
+
+  /* first section */
+  .product {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+  }
+
+  .topic {
+    margin:30px 2em 20px 0;
+    padding: 0 0 20px 0;
+    width: 50%;
+  }
+
+  .topic h1 {
+    padding: 0 0 0 25px;
+    margin-left: 25px;
+    width: 150%;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .topic p {
+    padding: 15px 5em 0 0;
+    width: 250%;
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+
+  .stars {
+    margin: 0;
+    /* padding: 0 30px 10px 0; */
+    width: 90%;
+  }
+
+  .first-star,
+  .second-star,
+  .third-star {
+    /* padding: 15px 80px; */
+    margin: 10px 0 5px 0;
+    display: inline-block;
+    width: 85vw;
+  }
+
+  .five {
+    margin: 0 0 0 5em;
+  }
+
+  .first-star img,
+  .second-star img,
+  .third-star img {
+    margin: 3px 3px 0 0;
+    width: 15px;
+    height: 15px;
+  }
+
+  .first-star h6,
+  .third-star h6 {
+    margin-left: 3rem;
+  }
+
+  .second-star h6 {
+    margin-left: 2rem;
+  }
+
+  /* second section */
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0 10px;
+  }
+
+  .Colton-Smith,
+  .Irene-Roberts,
+  .Anne-Wallace {
+    margin: 0 20px 20px 20px;
+  }
+
+  .Colton-Smith {
+    margin-top: 30px;
+  }
+
+  .Colton-Smith #body,
+  .Irene-Roberts #body,
+  .Anne-Wallace #body {
+    margin-left: 30px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 30px auto;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
